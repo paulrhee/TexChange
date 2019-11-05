@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
 <body>
+    <img src="test.jpg" alt="test image">
 
-<h1>TexChange</h1>
+    <h2>Search</h2>
 
-<h2>Search</h2>
+    <button type="button">Account</button>
 
-<p>My first paragraph.</p>
+    <input type="text" id="input" onkeyup="filterSearch()" placeholder="Search for textbooks">
+
+    <table id="textbookTable">
+    <tr class="header">
+        <th style="width:60%;">Name</th>
+        <th style="width:40%;">Image</th>
+    </tr>
+    <tr>
+        <td>Designing Interactive Systems</td>
+        <td><img src="designbook.jpg" alt="Design Textbook"></td>
+    </tr>
+    <tr>
+        <td>Music Industry</td>
+        <td><img src="musicbusiness.jpg" alt="Music Industry"></td>
+    </tr>
+    </table>
+
+
+    <button type="button">Create new listing</button>
 
 </body>
 </html>
