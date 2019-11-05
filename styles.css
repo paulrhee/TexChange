@@ -1,0 +1,15 @@
+.logo {
+	width:200px;
+	height:auto;
+}
+
+.center-box {
+	width:500px;
+	height:300px;
+	margin:0 auto;
+}
+
+.form-field input {
+	width:100%;
+	margin-bottom: 10px;
+}
