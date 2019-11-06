@@ -22,6 +22,8 @@
     <span class="form-field">Name: <select>
                                         <option value="HCI">Human Computer Interactions</option>
                                         <option value="MB">Music Business</option>
+                                        <option value="CogLab">Writing Papers in Psychology</option>
+                                        <option value="Stat">Statistics</option>
                                     </select></span><br>
     <button onclick="openHelp()">Help</button>
     <span class="form-field">Price ($): <input type="number" min="0.00" step="0.01" name="Price" value="" required></span><br>
@@ -39,7 +41,7 @@
     }
     function openHelp() {
         var helpWind = window.open("", "MsgWindow", "width=200,height=150");
-        helpWind.document.write("<p>Use the drop down menu to select the book you want to sell. If the book is NOT in the drop down menu, then create new listing of the book.</p>");
+        helpWind.document.write("<p>Use the drop down menu to select the book you want to sell. If the book is NOT in the drop down menu, then create new listing of the book. *Go to the main search page to create a new listing of the book</p>");
     }
     </script>
 
