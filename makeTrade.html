@@ -33,7 +33,7 @@
     <span class="form-field">Option: <input type="text" name="Option" value="Type the books you want"></span><br>
 
     <button type="button" onclick="closeCurWindow()">Cancel</button>
-	<button type="button" onclick="closeCurWindow()">Submit</button>
+	<button type="button" onclick="submitted()">Submit</button>
 	
 	<script>
 	function closeCurWindow() {
@@ -45,6 +45,10 @@
     }
     function createNew() {
 		var wind = window.open("createNew.html", "createNewWindow");
+    }
+    function submitted() {
+		alert("Submitted successfully!");
+		closeCurWindow();
 	}
     </script>
 
