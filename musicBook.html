@@ -32,8 +32,17 @@
     <img class="textbook" src="musicbusiness.jpg" alt="Music Business">
 
     <button type="button">Buy</button>
-    <button type="button">Sell</button>
-    <button type="button">Trade</button>
+    <button type="button" onclick="openSell()">Sell</button>
+	<button type="button" onclick="openTrade()">Trade</button>
+	
+	<script>
+	function openSell() {
+		var wind = window.open("makeSell.html", "sellWindow", "width=800,height=400");
+	}
+	function openTrade() {
+		var wind = window.open("makeTrade.html", "tradeWindow", "width=800,height=400");
+	}
+	</script>
 
 </body>
 </html>

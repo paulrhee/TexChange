@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<!--<link rel="shortcut icon" href="img/favicon.png">-->
+	<!-- Author Meta -->
+	<meta name="author" content="Paul Rhee, Ming Chiang-Tseng, Anisa Anuar">
+	<!-- Meta Description -->
+	<meta name="description" content="This is TexChange.">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="textbook exchange">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Search | TexChange</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2><u>Trade</u></h2>
+    <span class="form-field">Name: <select>
+                                        <option value="HCI">Human Computer Interactions</option>
+                                        <option value="MB">Music Business</option>
+                                    </select></span><br>
+    <button onclick="openHelp()">Help</button>
+    <span class="form-field">Condition: <select>
+                                            <option value="New">New</option>
+                                            <option value="Used">Used</option>
+                                        </select></span><br>
+    <span class="form-field">Option: <input type="text" name="Option" value="Type the books you want"></span><br>
+
+    <button type="button" onclick="closeCurWindow()">Cancel</button>
+	<button type="button" onclick="closeCurWindow()">Submit</button>
+	
+	<script>
+	function closeCurWindow() {
+		this.close();
+    }
+    function openHelp() {
+        var helpWind = window.open("", "MsgWindow", "width=200,height=150");
+        helpWind.document.write("<p>Use the drop down menu to select the book you have and are willing to trade.</p>");
+    }
+    function createNew() {
+		var wind = window.open("createNew.html", "createNewWindow");
+	}
+    </script>
+
+</body>
+</html>
