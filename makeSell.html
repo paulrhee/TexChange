@@ -30,7 +30,6 @@
                                             <option value="Used">Used</option>
                                         </select></span><br>
 
-    <button type="button" onclick="createNew()">Create New Listing</button>
     <button type="button" onclick="closeCurWindow()">Cancel</button>
 	<button type="button" onclick="closeCurWindow()">Submit</button>
 	
@@ -42,9 +41,6 @@
         var helpWind = window.open("", "MsgWindow", "width=200,height=150");
         helpWind.document.write("<p>Use the drop down menu to select the book you want to sell. If the book is NOT in the drop down menu, then create new listing of the book.</p>");
     }
-    function createNew() {
-		var wind = window.open("createNew.html", "createNewWindow");
-	}
     </script>
 
 </body>
