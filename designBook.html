@@ -32,8 +32,13 @@
     <img class="textbook" src="designbook.jpg" alt="Design Textbook">
 
     <button onclick="location.href='buyTable.html'" type="button">Buy</button>
-    <button type="button">Sell</button>
+    <button type="button" onclick="createSell()">Sell</button>
     <button onclick="location.href='tradeTable.html'" type="button">Trade</button>
 
+	<script>
+    function createSell(){
+        var sellWin = window.open("makeSell.html", "sell", "width=800,height=400")
+    }
+    </script>
 </body>
 </html>
