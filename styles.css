@@ -132,3 +132,13 @@ img.main {
 	cursor:pointer;
 	background:#8BB3BF;
 }
+
+.logo {
+	width: 100px;
+	height: auto;
+}
+
+.textbook {
+	width: 100px;
+	height: auto;
+}

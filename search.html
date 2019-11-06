@@ -18,12 +18,55 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <img class="logo" src="test.jpg" alt="test image">
 
-<h1>TexChange</h1>
+    <h2>Search</h2>
 
-<h2>Search</h2>
+    <button type="button">Account</button>
 
-<p>My first paragraph.</p>
+    <input type="text" id="input" onkeyup="filterSearch()" placeholder="Search for textbooks">
+
+    <table id="textbookTable">
+    <tr class="header">
+        <th style="width:60%;">Name</th>
+        <th style="width:40%;">Image</th>
+    </tr>
+    <tr>
+        <td>Designing Interactive Systems</td>
+        <td><img class = "textbook" src="designbook.jpg" alt="Design Textbook"></td>
+    </tr>
+    <tr>
+        <td>Music Industry</td>
+        <td><img class = "textbook" src="musicbusiness.jpg" alt="Music Industry"></td>
+    </tr>
+    </table>
+
+
+    <button type="button">Create new listing</button>
+
+    <script>
+        function filterSearch() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("input");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("textbookTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+                }
+            }
+            }
+    </script>
 
 </body>
 </html>
