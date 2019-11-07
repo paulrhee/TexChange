@@ -24,7 +24,7 @@
 
     <h2><u>Create New Listing</u></h2>
 
-    <form action="">
+    <form action="search.html", onsubmit="submitted()">
             <span class="form-field">Book Title: <input type="text" name="Book Title" value="" required></span><br>
             <span class="form-field">Author: <input type="text" name="Author" value="" required></span><br>
             <span class="form-field">Course Number: <input type="text" name="Course Number" value="" required></span><br>
@@ -36,6 +36,13 @@
                 
         </form>
     <button type="button" onclick="location.href='search.html'">Cancel</button>
+
+    <script>
+    
+    function submitted() {
+		    alert("Submitted successfully!");
+	  }
+    </script>
 
 </body>
 </html>
