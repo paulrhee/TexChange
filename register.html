@@ -21,19 +21,27 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
-	<img class="logo" src="test.jpg" alt="TexChange">
-
-	<div class="center-box">
-		<h1>Register</h1>
-		<form action="search.html">
-			<span class="form-field">Name: <input type="text" name="Name" value="" required></span><br>
-			<span class="form-field">Email: <input type="text" name="Email" value="" required></span><br>
-			<span class="form-field">Phone: <input type="tel" name="Phone Number" value=""></span><br>
-			<span class="form-field">Password: <input type="password" name="Password" value="" required></span><br>
-			<input type="submit" value="Submit">
-		</form>
-		<button onclick="location.href='login.html'" type="button">Cancel</button>
+	<div onclick="location.href='index.html'" class="nav-bar">
+		<div class="texchange">
+			TEXCHANGE
+		</div>
 	</div>
+	<div class="container-55">
+		<div class="form">
+			<h1>Register</h1>
+			<form class="form-box" action="search.html">
+				<span class="form-row"><p class="form-label">Name:* </p><input class="form-field" type="text" name="Name" value="" required></span><br>
+				<span class="form-row"><p class="form-label">Email:* </p><input class="form-field" type="text" name="Email" value="" required></span><br>
+				<span class="form-row"><p class="form-label">Phone: </p><input class="form-field" type="tel" name="Phone Number" value=""></span><br>
+				<span class="form-row"><p class="form-label">Password:* </p><input class="form-field" type="password" name="Password" value="" required></span><br>
+				<div class="button-row">
+					<input class="secondary-button" type="submit" value="Submit">
+					<button class="secondary-button" onclick="location.href='index.html'" type="button">Cancel</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<img class="register" src="register.png" />
 
 
 </body>
