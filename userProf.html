@@ -30,7 +30,7 @@ th {
 }
 </style>
 <body>
-    <img class = "logo" src="test.jpg" alt="test image">
+    <img class = "logo" src="logo.png" alt="logo" onclick="location.href='search.html'">
 
     <h2><u>User Profile</u></h2>
 
@@ -51,8 +51,17 @@ th {
             </tr>
           </table>
 
-    <button type="button">Create Sell</button>
-    <button type="button">Create Trade</button>
+    <button type="button" onclick="createSell()">Create Sell</button>
+    <button type="button" onclick="createTrade()">Create Trade</button>
+
+    <script>
+    function createSell(){
+      var sellWin = window.open("makeSell.html", "sell", "width=800,height=400")
+    }
+    function createTrade(){
+      var tradeWin = window.open("makeTrade.html", "trade", "width=800,height=400")
+    }
+    </script>
 
 </body>
 </html>

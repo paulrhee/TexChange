@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<!--<link rel="shortcut icon" href="img/favicon.png">-->
+	<!-- Author Meta -->
+	<meta name="author" content="Paul Rhee, Ming Chiang-Tseng, Anisa Anuar">
+	<!-- Meta Description -->
+	<meta name="description" content="This is TexChange.">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="textbook exchange">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Search | TexChange</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2><u>Sell</u></h2>
+    <span class="form-field">Name: <select>
+                                        <option value="HCI">Human Computer Interactions</option>
+                                        <option value="MB">Music Business</option>
+                                        <option value="CogLab">Writing Papers in Psychology</option>
+                                        <option value="Stat">Statistics</option>
+                                    </select></span><br>
+    <button onclick="openHelp()">Help</button>
+    <span class="form-field">Price ($): <input type="number" min="0.00" step="0.01" name="Price" value="" required></span><br>
+    <span class="form-field">Condition: <select>
+                                            <option value="New">New</option>
+                                            <option value="Used">Used</option>
+                                        </select></span><br>
+
+    <button type="button" onclick="closeCurWindow()">Cancel</button>
+	<button type="button" onclick="submitted()">Submit</button>
+	
+	<script>
+	function closeCurWindow() {
+		this.close();
+    }
+    function openHelp() {
+        var helpWind = window.open("", "MsgWindow", "width=200,height=150");
+        helpWind.document.write("<p>Use the drop down menu to select the book you want to sell. If the book is NOT in the drop down menu, then create new listing of the book. *Go to the main search page to create a new listing of the book</p>");
+	}
+	function submitted() {
+		alert("Submitted successfully!");
+		closeCurWindow();
+	}
+    </script>
+
+</body>
+</html>

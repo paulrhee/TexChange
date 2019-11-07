@@ -18,11 +18,11 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <img class="logo" src="test.jpg" alt="test image">
+    <img class = "logo" src="logo.png" alt="logo" onclick="location.href='search.html'">
 
     <h2>Search</h2>
 
-    <button type="button">Account</button>
+    <button onclick="location.href='userProf.html'" type="button">Account</button>
 
     <input type="text" id="input" onkeyup="filterSearch()" placeholder="Search for textbooks">
 
@@ -32,17 +32,25 @@
         <th style="width:40%;">Image</th>
     </tr>
     <tr>
-        <td>Designing Interactive Systems</td>
+        <td> <a href=designBook.html>Designing Interactive Systems</td>
         <td><img class = "textbook" src="designbook.jpg" alt="Design Textbook"></td>
     </tr>
     <tr>
-        <td>Music Industry</td>
+        <td><a href=musicBook.html>Music Industry</td>
         <td><img class = "textbook" src="musicbusiness.jpg" alt="Music Industry"></td>
+    </tr>
+    <tr>
+        <td><a href=statBook.html>Statistic</td>
+        <td><img class = "textbook" src="statistic.jpeg" alt="Statistic"></td>
+    </tr>
+    <tr>
+        <td><a href=psycLabBook.html>Writing Papers in Psychology</td>
+        <td><img class = "textbook" src="psycLabBook.jpeg" alt="Writing Papers in Psychology"></td>
     </tr>
     </table>
 
 
-    <button type="button">Create new listing</button>
+    <button onclick="location.href='createNew.html'" type="button">Create new listing</button>
 
     <script>
         function filterSearch() {

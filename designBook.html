@@ -18,9 +18,9 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <img class = "logo" src="test.jpg" alt="test image">
+    <img class = "logo" src="logo.png" alt="logo" onclick="location.href='search.html'">
 
-    <button type="button">Account</button>
+    <button onclick="location.href='userProf.html'" type="button">Account</button>
 
     <h4 class="category">Book Title</h4> <p>Designing Interactive System</p>
     <h4 class="category">Author</h4> <p>David R. Benyon</p>
@@ -31,9 +31,14 @@
 
     <img class="textbook" src="designbook.jpg" alt="Design Textbook">
 
-    <button type="button">Buy</button>
-    <button type="button">Sell</button>
-    <button type="button">Trade</button>
+    <button onclick="location.href='buyTable.html'" type="button">Buy</button>
+    <button type="button" onclick="createSell()">Sell</button>
+    <button onclick="location.href='tradeTable.html'" type="button">Trade</button>
 
+	<script>
+    function createSell(){
+        var sellWin = window.open("makeSell.html", "sell", "width=800,height=400")
+    }
+    </script>
 </body>
 </html>

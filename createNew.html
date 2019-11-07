@@ -18,13 +18,13 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <img class = "logo" src="test.jpg" alt="test image">
+    <img class = "logo" src="logo.png" alt="logo" onclick="location.href='search.html'">
 
-    <button type="button">Account</button>
+    <button onclick="location.href='userProf.html'" type="button">Account</button>
 
     <h2><u>Create New Listing</u></h2>
 
-    <form action="">
+    <form action="search.html", onsubmit="submitted()">
             <span class="form-field">Book Title: <input type="text" name="Book Title" value="" required></span><br>
             <span class="form-field">Author: <input type="text" name="Author" value="" required></span><br>
             <span class="form-field">Course Number: <input type="text" name="Course Number" value="" required></span><br>
@@ -35,11 +35,14 @@
             <input type="submit" value="Submit">
                 
         </form>
-    <button type="button">Cancel</button>
+    <button type="button" onclick="location.href='search.html'">Cancel</button>
 
-    <button type="button">Buy</button>
-    <button type="button">Sell</button>
-    <button type="button">Trade</button>
+    <script>
+    
+    function submitted() {
+		    alert("Submitted successfully!");
+	  }
+    </script>
 
 </body>
 </html>

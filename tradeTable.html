@@ -30,13 +30,12 @@ th {
 }
 </style>
 <body>
-    <img class = "logo" src="test.jpg" alt="test image">
+    <img class = "logo" src="logo.png" alt="logo" onclick="location.href='search.html'">
 
-    <button type="button">Account</button>
+    <button onclick="location.href='userProf.html'" type="button">Account</button>
 
     <h2><u>TRADE</u></h2>
-    <p>The following people owns a copy of Music Industry and are willing to trade for the books listed under "Book Wanted" column.</p>
-    <h3><u>Music Industry</u></h3>
+    <p>The following people owns a copy of this book and are willing to trade for the books listed under "Book Wanted" column.</p>
 
     <table>
         <tr>
@@ -91,6 +90,13 @@ th {
             <td>New</td>
         </tr>
     </table>
+    <button type="button" onclick="createTrade()">Create Trade</button>
+
+    <script>
+    function createTrade(){
+        var tradeWin = window.open("makeTrade.html", "trade", "width=800,height=400")
+    }
+    </script>
 
 </body>
 </html>
