@@ -18,27 +18,48 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <img class = "logo" src="logo.png" alt="logo" onclick="location.href='search.html'">
 
-    <button onclick="location.href='userProf.html'" type="button">Account</button>
+    <div onclick="location.href='search.html'" class="nav-bar">
+        <div class="texchange">
+            TEXCHANGE
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="userProf.html">Account</a></li>
+                <li><a href="index.html">Log out</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <h4 class="category">Book Title</h4> <p>Music Business</p>
-    <h4 class="category">Author</h4> <p>Baskerville</p>
-    <h4 class="category">Course Number</h4> <p>MUSI1220</p>
-    <h4 class="category">Course Name</h4> <p>Music Industry</p>
-    <h4 class="category">Professor</h4> <p>Melissa Ferrick</p>
-    <h4 class="category">Average Price ($)</h4> <p>13.00</p>
+    <div class="container-95">
 
-    <img class="textbook" src="musicbusiness.jpg" alt="Music Business">
+        <div class="container-55">
 
-    <button onclick="location.href='buyTable.html'" type="button">Buy</button>
-    <button type="button" onclick="createSell()">Sell</button>
-    <button onclick="location.href='tradeTable.html'" type="button">Trade</button>
+            <h4 class="category">Book Title</h4> <p>Music Business</p>
+            <h4 class="category">Author</h4> <p>Baskerville</p>
+            <h4 class="category">Course Number</h4> <p>MUSI1220</p>
+            <h4 class="category">Course Name</h4> <p>Music Industry</p>
+            <h4 class="category">Professor</h4> <p>Melissa Ferrick</p>
+            <h4 class="category">Average Price ($)</h4> <p>13.00</p>
 
-	<script>
-    function createSell(){
-        var sellWin = window.open("makeSell.html", "sell", "width=800,height=400")
-    }
-    </script>
+            <button class="secondary-button" onclick="location.href='buyTable.html'" type="button">Buy</button>
+            <button class="secondary-button" type="button" onclick="createSell()">Sell</button>
+            <button class="secondary-button" onclick="location.href='tradeTable.html'" type="button">Trade</button>
+
+        </div>
+
+        <div class="container-45">
+
+            <img class="textbook" src="musicbusiness.jpg" alt="Music Business">
+
+            <script>
+                function createSell(){
+                    var sellWin = window.open("makeSell.html", "sell", "width=800,height=400")
+                }
+            </script>
+        </div>
+
+    </div>
+    
 </body>
 </html>

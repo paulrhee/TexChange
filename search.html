@@ -18,42 +18,42 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <img class = "logo" src="logo.png" alt="logo" onclick="location.href='search.html'">
 
-    <h2>Search</h2>
+    <div onclick="location.href='search.html'" class="nav-bar">
+        <div class="texchange">
+            TEXCHANGE
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="userProf.html">Account</a></li>
+                <li><a href="index.html">Log out</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container-95">
+        <h1>Search</h1>
+        <input class="search-bar" type="text" id="input" onkeyup="filterSearch()" placeholder="Search for textbooks...">
 
-    <button onclick="location.href='userProf.html'" type="button">Account</button>
-
-    <input type="text" id="input" onkeyup="filterSearch()" placeholder="Search for textbooks">
-
-    <table id="textbookTable">
-    <tr class="header">
-        <th style="width:60%;">Name</th>
-        <th style="width:40%;">Image</th>
-    </tr>
-    <tr>
-        <td> <a href=designBook.html>Designing Interactive Systems</td>
-        <td><img class = "textbook" src="designbook.jpg" alt="Design Textbook"></td>
-    </tr>
-    <tr>
-        <td><a href=musicBook.html>Music Industry</td>
-        <td><img class = "textbook" src="musicbusiness.jpg" alt="Music Industry"></td>
-    </tr>
-    <tr>
-        <td><a href=statBook.html>Statistic</td>
-        <td><img class = "textbook" src="statistic.jpeg" alt="Statistic"></td>
-    </tr>
-    <tr>
-        <td><a href=psycLabBook.html>Writing Papers in Psychology</td>
-        <td><img class = "textbook" src="psycLabBook.jpeg" alt="Writing Papers in Psychology"></td>
-    </tr>
-    </table>
+        <table id="textbookTable">
+            <tr class="row">
+                <td><a href="designBook.html"><img src="designbook.jpg" alt="Design Textbook">Designing Interactive Systems</a></td>
+            </tr>
+            <tr class="row">
+                <td><a href="musicBook.html"><img src="musicbusiness.jpg" alt="Music Industry">Music Industry</a></td>
+            </tr>
+            <tr class="row">
+                <td><a href="statBook.html"><img src="statistic.jpeg" alt="Statistics">Statistics</a></td>
+            </tr>
+            <tr class="row">
+                <td><a href="psycLabBook.html"><img src="psycLabBook.jpeg" alt="Writing Papers in Psychology">Writing Papers in Psychology</a></td>
+            </tr>
+        </table>
 
 
-    <button onclick="location.href='createNew.html'" type="button">Create new listing</button>
+        <button class="secondary-button" onclick="location.href='createNew.html'" type="button">Create new listing</button>
 
-    <script>
-        function filterSearch() {
+        <script>
+            function filterSearch() {
             // Declare variables
             var input, filter, table, tr, td, i, txtValue;
             input = document.getElementById("input");
@@ -65,16 +65,17 @@
             for (i = 0; i < tr.length; i++) {
                 td = tr[i].getElementsByTagName("td")[0];
                 if (td) {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                } else {
-                    tr[i].style.display = "none";
-                }
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
                 }
             }
-            }
+        }
     </script>
 
+</div>
 </body>
 </html>

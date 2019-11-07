@@ -18,27 +18,51 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<img class = "logo" src="logo.png" alt="logo" onclick="location.href='search.html'">
 
-    <button onclick="location.href='userProf.html'" type="button">Account</button>
+    <div onclick="location.href='search.html'" class="nav-bar">
+        <div class="texchange">
+            TEXCHANGE
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="userProf.html">Account</a></li>
+                <li><a href="index.html">Log out</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <h4 class="category">Book Title</h4> <p>Writing Papers in Psychology</p>
-    <h4 class="category">Author</h4> <p>Ralph L. Rosnow, Mimi Rosnow</p>
-    <h4 class="category">Course Number</h4> <p>PSYC4612</p>
-    <h4 class="category">Course Name</h4> <p>Cognition Laboratory</p>
-    <h4 class="category">Professor</h4> <p>Neal Pearlmutter</p>
-    <h4 class="category">Average Price ($)</h4> <p>10.00</p>
+    <div class="container-95">
 
-    <img class="textbook" src="psycLabBook.jpeg" alt="Writing Papers in Psychology">
+        <div class="container-55">
+            <button onclick="location.href='userProf.html'" type="button">Account</button>
 
-    <button onclick="location.href='buyTable.html'" type="button">Buy</button>
-    <button type="button" onclick="createSell()">Sell</button>
-    <button onclick="location.href='tradeTable.html'" type="button">Trade</button>
+            <h4 class="category">Book Title</h4> <p>Writing Papers in Psychology</p>
+            <h4 class="category">Author</h4> <p>Ralph L. Rosnow, Mimi Rosnow</p>
+            <h4 class="category">Course Number</h4> <p>PSYC4612</p>
+            <h4 class="category">Course Name</h4> <p>Cognition Laboratory</p>
+            <h4 class="category">Professor</h4> <p>Neal Pearlmutter</p>
+            <h4 class="category">Average Price ($)</h4> <p>10.00</p>
 
-	<script>
-    function createSell(){
-        var sellWin = window.open("makeSell.html", "sell", "width=800,height=400")
-    }
-    </script>
+
+            <button class="secondary-button" onclick="location.href='buyTable.html'" type="button">Buy</button>
+            <button class="secondary-button" type="button" onclick="createSell()">Sell</button>
+            <button class="secondary-button" onclick="location.href='tradeTable.html'" type="button">Trade</button>
+
+        </div>
+
+        <div class="container-45">
+
+            <img class="textbook" src="psycLabBook.jpeg" alt="Writing Papers in Psychology">
+
+            <script>
+                function createSell(){
+                    var sellWin = window.open("makeSell.html", "sell", "width=800,height=400")
+                }
+            </script>
+
+        </div>
+
+    </div>
+
 </body>
 </html>
