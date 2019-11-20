@@ -19,18 +19,18 @@
 </head>
 <body>
     <h2><u>Trade</u></h2>
-    <span class="form-field">Name: <select>
+    <span class="form-field">Name*: <select>
                                         <option value="HCI">Human Computer Interactions</option>
                                         <option value="MB">Music Business</option>
                                         <option value="CogLab">Writing Papers in Psychology</option>
                                         <option value="Stat">Statistics</option>
                                     </select></span><br>
     <button onclick="openHelp()">Help</button>
-    <span class="form-field">Condition: <select>
+    <span class="form-field">Condition*: <select>
                                             <option value="New">New</option>
                                             <option value="Used">Used</option>
                                         </select></span><br>
-    <span class="form-field">Option: <input type="text" name="Option" value="Type the books you want"></span><br>
+    <span class="form-field">Books Wanted: <input type="text" name="Option" value="Type the books you want"></span><br>
 
     <button type="button" onclick="closeCurWindow()">Cancel</button>
 	<button type="button" onclick="submitted()">Submit</button>
@@ -44,7 +44,7 @@
         helpWind.document.write("<p>Use the drop down menu to select the book you have and are willing to trade.</p>");
     }
     function submitted() {
-		alert("Submitted successfully!");
+		alert("Submitted successfully! Look for your listings under ACCOUNT!");
 		closeCurWindow();
 	}
     </script>
