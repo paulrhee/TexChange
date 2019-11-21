@@ -37,69 +37,72 @@ th {
         </div>
         <nav>
             <ul class="nav-menu">
+                <li><a href="search.html">Home</a></li>
                 <li><a href="userProf.html">Account</a></li>
-                <li><a href="index.html">Log out</a></li>
+                <li><a href="login.html">Log out</a></li>
+
             </ul>
         </nav>
     </div>
-
-    <h2><u>TRADE</u></h2>
-    <p>The following people owns a copy of this book and are willing to trade for the books listed under "Book Wanted" column.</p>
-
-    <table>
-        <tr>
-            <th><u>Name</u></th>
-            <th><u>Contact Info</u></th> 
-            <th><u>Book Wanted</u></th>
-            <th><u>Condition</u></th>
-        </tr>
-        <tr>
-            <td>Brendan Smith</td>
-            <td>
-                <table>
-                    <tr>
-                        <td>Phone: 9999999999</td>
-                    </tr>
-                    <tr>
-                        <td>Email: b.smith@yahoo.com</td>
-                    </tr>
-                </table>
-            </td>
-            <td>Lord of the Flies</td>
-            <td>Used</td>
-        </tr>
-        <tr>
-            <td>Casey Lee</td>
-            <td>
-                <table>
-                    <tr>
-                        <td>Phone: N/A</td>
-                    </tr>
-                    <tr>
-                        <td>Email: lee.c@husky.neu.edu</td>
-                    </tr>
-                </table>
-            </td>
-            <td>No Preference</td>
-            <td>New</td>
-        </tr>
-        <tr>
-            <td>Bob Bilder</td>
-            <td>
-                <table>
-                    <tr>
-                        <td>Phone: 1234567891</td>
-                    </tr>
-                    <tr>
-                        <td>Email: bb@yahoo.com</td>
-                    </tr>
-                </table>
-            </td>
-            <td>Biology 101</td>
-            <td>New</td>
-        </tr>
-    </table>
-    <button class="secondary-button" type="button" onclick="createTrade()">Create Trade</button>
+    <div class="container-95">
+        <h2><u>TRADE</u></h2>
+        <p>The following people owns a copy of this book and are willing to trade for the books listed under "Book Wanted" column. Please contact the person that you wish to buy from via email or phone. Thank you!</p>
+  
+        <table>
+            <tr>
+                <th><u>Name</u></th>
+                <th><u>Contact Info</u></th> 
+                <th><u>Book Wanted</u></th>
+                <th><u>Condition</u></th>
+            </tr>
+            <tr>
+                <td>Brendan Smith</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Phone: 9999999999</td>
+                        </tr>
+                        <tr>
+                            <td>Email: b.smith@yahoo.com</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Lord of the Flies</td>
+                <td>Used</td>
+            </tr>
+            <tr>
+                <td>Casey Lee</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Phone: N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Email: lee.c@husky.neu.edu</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>No Preference</td>
+                <td>New</td>
+            </tr>
+            <tr>
+                <td>Bob Bilder</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Phone: 1234567891</td>
+                        </tr>
+                        <tr>
+                            <td>Email: bb@yahoo.com</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Biology 101</td>
+                <td>New</td>
+            </tr>
+        </table>
+        <button type="button" class="secondary-button" onclick="createTrade()">New Trade Entry</button>
+    </div>
 
     <script>
     function createTrade(){

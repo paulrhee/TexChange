@@ -37,33 +37,39 @@ th {
         </div>
         <nav>
             <ul class="nav-menu">
+                <li><a href="search.html">Home</a></li>
                 <li><a href="userProf.html">Account</a></li>
-                <li><a href="index.html">Log out</a></li>
+                <li><a href="login.html">Log out</a></li>
             </ul>
         </nav>
     </div>
 
-    <h2><u>User Profile</u></h2>
+    <div class="container-95">
 
-    <h4 class="category">Name</h4> <p></p>
-    <h4 class="category">Email</h4> <p></p>
-    <h4 class="category">Phone Number</h4> <p></p>
+      <h2><u>User Profile</u></h2>
 
-    <table>
-            <tr>
-              <th><u>Type</u></th>
-              <th><u>Name</u></th> 
-              <th><u>Action</u></th>
-            </tr>
-            <tr>
-              <td>SELL</td>
-              <td>Music Business</td>
-              <td><button class="secondary-button" type="button">remove</button></td>
-            </tr>
-          </table>
 
-    <button class="secondary-button" type="button" onclick="createSell()">Create Sell</button>
-    <button class="secondary-button" type="button" onclick="createTrade()">Create Trade</button>
+      <h4 class="category">Name</h4> <p></p>
+      <h4 class="category">Email</h4> <p></p>
+      <h4 class="category">Phone Number</h4> <p></p>
+
+      <table>
+              <tr>
+                <th><u>Type</u></th>
+                <th><u>Name</u></th> 
+                <th><u>Action</u></th>
+              </tr>
+              <tr>
+                <td>SELL</td>
+                <td>Music Business</td>
+                <td><button type="button">remove</button></td>
+              </tr>
+            </table>
+
+      <button class="secondary-button" type="button" onclick="createSell()">New Sell Entry</button>
+      <button class="secondary-button" type="button" onclick="createTrade()">New Trade Entry</button>
+
+    </div>
 
     <script>
     function createSell(){
