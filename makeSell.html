@@ -20,23 +20,25 @@
 <body>
 
 	<div class="container-95">
-		<h2><u>Sell</u></h2>
-		<span class="form-field">Name*: <select>
+			<h2><u>Sell</u></h2>
+			<span class="form-field">Name*: <select>
 											<option value="HCI">Human Computer Interactions</option>
 											<option value="MB">Music Business</option>
 											<option value="CogLab">Writing Papers in Psychology</option>
 											<option value="Stat">Statistics</option>
 										</select></span><br>
 		
-		<span class="form-field">Price ($)*: <input type="number" min="0.00" step="0.01" name="Price" value="" oninput="validity.valid||(value='');" required></span><br>
-		<span class="form-field">Condition*: <select>
+			<span class="form-field">Price ($)*: <input type="number" min="0.00" step="0.01" name="Price" id = "Price" value="" oninput="validity.valid||(value='');" required></span><br>
+			<span class="form-field">Condition*: <select>
 												<option value="New">New</option>
 												<option value="Used">Used</option>
 											</select></span><br>
-
-		<button type="button" class="secondary-button" onclick="closeCurWindow()">Cancel</button>
-		<button type="button" class="secondary-button" onclick="openHelp()">Help</button>
-		<button type="button" class="secondary-button" onclick="submitted()">Submit</button>
+			<div class="button-row">
+					<button type="button" class="secondary-button" onclick="closeCurWindow()">Cancel</button>
+					<button type="button" class="secondary-button" onclick="openHelp()">Help</button>
+					<input class="secondary-button" type="submit" value="Submit" onclick="submitted()">
+			</div>
+		
 	</div>
 	
 	<script>
@@ -48,8 +50,12 @@
         helpWind.document.write("<p>Use the drop down menu to select the book you want to sell. If the book is NOT in the drop down menu, then create new listing of the book. *Go to the main search page to create a new listing of the book</p>");
 	}
 	function submitted() {
-		alert("Submitted successfully! Look for your listings under ACCOUNT!");
-		closeCurWindow();
+		if(document.getElementById("Price").value == ""){
+			alert("Please input a price")
+			return false;
+		} else{
+			alert("Submitted successfully! Look for your listings under ACCOUNT!");
+			closeCurWindow();}
 	}
     </script>
 
