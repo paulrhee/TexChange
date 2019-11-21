@@ -10,10 +10,10 @@ h1 {
 }
 
 .nav-bar {
-	width:100%;
-	height:100px;
-	display:block;
-	float:left;
+	width:97%;
+	height:40px;
+	padding:10px 15px;
+	display:inline-block;
 }
 
 .texchange {
@@ -68,7 +68,7 @@ a {
 }
 
 .form {
-	margin:50px 100px;
+	margin:100px;
 }
 
 .form-box {
@@ -127,7 +127,7 @@ img.register {
 .hero-text {
 	width:50%;
 	margin-left:100px;
-	margin-top:50px;
+	margin-top:130px;
 }
 
 .hero-text h1 {
@@ -215,11 +215,23 @@ img.register {
 	font-weight: 800;
 	font-size: 1.25em;
 	line-height: 0.75em;
-	padding:5px;
+	padding:7px 14px;
 
 	color:#000000;
 
-	margin-bottom:20px;
+	margin-bottom:12px;
+
+	border:#AAA 1px solid;
+	background-color:#EEE;
+
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.search-bar:hover {
+	background-color:#DDD;
 }
 
 #textbookTable {
@@ -229,24 +241,49 @@ img.register {
 #textbookTable tr {
 	width:20%;
 	float:left;
-	height:350px;
+	height:auto;
 	border:#AAA 1px solid;
 	margin:1%;
 	padding:1%;
 	text-align:center;
+	background-color:#EEE;
+
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
 }
 
 #textbookTable td {
 	width:100%;
-	height:350px;
+	display:inline-block;
+	overflow: hidden;
 }
 
 #textbookTable tr:hover {
-	background:#DDD;
-	border:#DDD 1px solid;
+	background-color:#DDD;
 }
 
-#textbookTable td img {
-	height:90%;
-	width:auto;
+#textbookTable td .search-result {
+	width:100%;
+	height:300px;
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+#textbookTable td #designBook {
+	background-image:url("designBook.jpg");
+}
+
+#textbookTable td #musicBook {
+	background-image:url("musicBusiness.jpg");
+}
+
+#textbookTable td #statBook {
+	background-image:url("statistic.jpeg");
+}
+
+#textbookTable td #psycLabBook {
+	background-image:url("psycLabBook.jpeg");
 }
