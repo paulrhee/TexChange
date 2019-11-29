@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<!--<link rel="shortcut icon" href="img/favicon.png">-->
+	<!-- Author Meta -->
+	<meta name="author" content="Paul Rhee, Ming Chiang-Tseng, Anisa Anuar">
+	<!-- Meta Description -->
+	<meta name="description" content="This is TexChange.">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="textbook exchange">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Search | TexChange</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+th {
+  text-align: left;
+}
+</style>
+<body>
+
+    <div onclick="location.href='search.html'" class="nav-bar">
+        <div class="texchange">
+            TEXCHANGE
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="search.html">Home</a></li>
+                <li><a href="userProf.html">Account</a></li>
+                <li><a href="login.html">Log out</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container-95">
+
+        <h2><u>BUY</u></h2>
+        <p>The following people have this textbook! Please contact the person that you wish to buy from via email or phone. Thank you!</p>
+
+        <table id="buyTable">
+            <tr>
+                <th><u>Name</u></th>
+                <th><u>Email</u></th> 
+                <th><u>Phone</u></th> 
+                <th><u>Price</u></th>
+                <th><u>Condition</u></th>
+            </tr>
+            
+        </table>
+    </div>
+
+<script>
+
+function emptyStr(given_str) {
+    if (given_str) {
+        return given_str.toString();
+    }
+    else {
+        return "N/A";
+    }
+}
+
+var name = [];
+var email = [];
+var phone = [];
+var condition = [];
+var price = [];
+
+// set up connection with sql
+var mysql = require('mysql');
+var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "mydb"
+});
+
+// type in query
+var query = "select `name`, email, phone, `condition`, price from buy right join (select * from listing where listing_id = 1) as listing on book_sold_id = listing_id left join user on seller_id = user_id";
+
+con.connect();
+
+con.query(query, function(err, obj) {
+    // convert to json
+    var arrObjStr = JSON.stringify(obj);
+    var arrObj = eval(arrObjStr);
+    // for each object in json
+    for (var i = 0; i < arrObj.length; i ++) {
+
+        // parse to arrays
+        name.push(arrObj[i].name);
+        email.push(arrObj[i].email);
+        phone.push(arrObj[i].phone);
+        price.push(arrObj[i].price);
+        condition.push(arrObj[i].condition);
+    }
+
+    var table = document.getElementById("buyTable");
+    for (var i = 0; i < price.length; i ++) {
+        var row = table.insertRow(table.rows.length);
+        var nameCell = row.insertCell(0);
+        var emailCell = row.insertCell(1);
+        var phoneCell = row.insertCell(2);
+        var priceCell = row.insertCell(3);
+        var condCell = row.insertCell(4);
+        nameCell.innerHTML = emptyStr(name[i]);
+        emailCell.innerHTML = emptyStr(email[i]);
+        phoneCell.innerHTML = emptyStr(phone[i]);
+        priceCell.innerHTML = emptyStr(price[i]);
+        condCell.innerHTML = emptyStr(condition[i]);
+    }
+});
+
+con.end();
+
+var table = document.getElementById("buyTable");
+    var row = table.insertRow(table.rows.length);
+    var cell1 = row.insertCell(0);
+    cell1.innerHTML = "HELLO";
+
+
+
+</script>
+
+</body>
+</html>
