@@ -41,7 +41,9 @@
 	<script>
 	function addToTrade() {
 		alert("Start");
+		alert("getting name");
 		var inputName = document.getElementById("name_form");
+		alert("setting name");
 		localStorage.setItem("tradeName", inputName.value.toString());
 		alert("got name");
 		var inputCond = document.getElementById("cond_form");
