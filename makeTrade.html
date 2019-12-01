@@ -41,11 +41,11 @@
 	<script>
 	function addToTrade() {
 		var inputName = document.getElementById("name");
-		localStorage.setItem("tradeName", inputName.value);
+		localStorage.setItem("tradeName", inputName.value.toString());
 		var inputCond = document.getElementById("condition");
-		localStorage.setItem("tradeCond", inputCond.value);
+		localStorage.setItem("tradeCond", inputCond.value.toString());
 		var inputBooks = document.getElementById("books");
-		localStorage.setItem("tradeBooks", inputBooks.value);
+		localStorage.setItem("tradeBooks", inputBooks.value.toString());
 	}
 	function closeCurWindow() {
 		this.close();
