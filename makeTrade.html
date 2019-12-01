@@ -35,7 +35,7 @@
 
 		<button type="button" class="secondary-button" onclick="closeCurWindow()">Cancel</button>
 		<button type="button" class="secondary-button" onclick="openHelp()">Help</button>
-		<button type="button" class="secondary-button" onclick="openHelp()">Submit</button>
+		<button type="button" class="secondary-button" onclick="addToTrade()">Submit</button>
 	</div>
 	
 	<script>
@@ -46,8 +46,6 @@
 		localStorage.setItem("tradeCond", inputCond.value.toString());
 		var inputBooks = document.getElementById("books_form");
 		localStorage.setItem("tradeBooks", inputBooks.value.toString());
-		alert("Submitted successfully! Look for your listings under ACCOUNT!");
-		closeCurWindow();
 	}
 	function closeCurWindow() {
 		this.close();
