@@ -21,17 +21,17 @@
 
 	<div class="container-95">
 		<h2><u>Trade</u></h2>
-		<span class="form-field" id="name">Name*: <select>
+		<span class="form-field" id="name_form">Name*: <select>
 											<option value="HCI">Human Computer Interactions</option>
 											<option value="MB">Music Business</option>
 											<option value="CogLab">Writing Papers in Psychology</option>
 											<option value="Stat">Statistics</option>
 										</select></span><br>
-		<span class="form-field" id="condition">Condition*: <select>
+		<span class="form-field" id="cond_form">Condition*: <select>
 												<option value="New">New</option>
 												<option value="Used">Used</option>
 											</select></span><br>
-		<span class="form-field" id="books">Books Wanted: <input type="text" name="Option" value="Type the books you want"></span><br>
+		<span class="form-field" id="books_form">Books Wanted: <input type="text" name="Option" value="Type the books you want"></span><br>
 
 		<button type="button" class="secondary-button" onclick="closeCurWindow()">Cancel</button>
 		<button type="button" class="secondary-button" onclick="openHelp()">Help</button>
@@ -40,16 +40,11 @@
 	
 	<script>
 	function addToTrade() {
-		var inputName = document.getElementById("name");
-		if (!(typeof inputName.value == "undefined")) {
-			localStorage.setItem("tradeName", inputName.value.toString());
-			
-		} else {
-			localStorage.setItem("tradeName", "uh oh");
-		}
-		var inputCond = document.getElementById("condition");
+		var inputName = document.getElementById("name_form");
+		localStorage.setItem("tradeName", inputName.value.toString());
+		var inputCond = document.getElementById("cond_form");
 		localStorage.setItem("tradeCond", inputCond.value.toString());
-		var inputBooks = document.getElementById("books");
+		var inputBooks = document.getElementById("books_form");
 		localStorage.setItem("tradeBooks", inputBooks.value.toString());
 	}
 	function closeCurWindow() {
