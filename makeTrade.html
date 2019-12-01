@@ -21,17 +21,17 @@
 
 	<div class="container-95">
 		<h2><u>Trade</u></h2>
-		<span class="form-field">Name*: <select>
+		<span class="form-field" id="name">Name*: <select>
 											<option value="HCI">Human Computer Interactions</option>
 											<option value="MB">Music Business</option>
 											<option value="CogLab">Writing Papers in Psychology</option>
 											<option value="Stat">Statistics</option>
 										</select></span><br>
-		<span class="form-field">Condition*: <select>
+		<span class="form-field" id="condition">Condition*: <select>
 												<option value="New">New</option>
 												<option value="Used">Used</option>
 											</select></span><br>
-		<span class="form-field">Books Wanted: <input type="text" name="Option" value="Type the books you want"></span><br>
+		<span class="form-field" id="books">Books Wanted: <input type="text" name="Option" value="Type the books you want"></span><br>
 
 		<button type="button" class="secondary-button" onclick="closeCurWindow()">Cancel</button>
 		<button type="button" class="secondary-button" onclick="openHelp()">Help</button>
@@ -39,6 +39,14 @@
 	</div>
 	
 	<script>
+	function addToTrade() {
+		var inputName = document.getElementById("name");
+		localStorage.setItem("tradeName", inputName.value);
+		var inputCond = document.getElementById("condition");
+		localStorage.setItem("tradeCond", inputCond.value);
+		var inputBooks = document.getElementById("books");
+		localStorage.setItem("tradeBooks", inputBooks.value);
+	}
 	function closeCurWindow() {
 		this.close();
     }
@@ -47,6 +55,7 @@
         helpWind.document.write("<p>Use the drop down menu to select the book you have and are willing to trade.</p>");
     }
     function submitted() {
+		this.addToTrade();
 		alert("Submitted successfully! Look for your listings under ACCOUNT!");
 		closeCurWindow();
 	}
