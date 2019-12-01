@@ -41,7 +41,12 @@
 	<script>
 	function addToTrade() {
 		var inputName = document.getElementById("name");
-		localStorage.setItem("tradeName", inputName.value.toString());
+		if (!(typeof inputName.value == "undefined")) {
+			localStorage.setItem("tradeName", inputName.value.toString());
+			
+		} else {
+			localStorage.setItem("tradeName", "uh oh");
+		}
 		var inputCond = document.getElementById("condition");
 		localStorage.setItem("tradeCond", inputCond.value.toString());
 		var inputBooks = document.getElementById("books");
