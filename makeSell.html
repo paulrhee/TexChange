@@ -36,28 +36,19 @@
 			<div class="button-row">
 					<button type="button" class="secondary-button" onclick="closeCurWindow()">Cancel</button>
 					<button type="button" class="secondary-button" onclick="openHelp()">Help</button>
-					<input class="secondary-button" type="submit" value="Submit" onclick="addToSell()">
+					<input class="secondary-button" type="submit" value="Submit" onclick="submitted()">
 			</div>
 		
 	</div>
 	
 	<script>
 	function addToSell() {
-		alert("Start");
-		alert("getting name");
 		var inputName = document.getElementById("name_form");
-		alert("setting name");
 		localStorage.setItem("sellName", JSON.stringify(inputName.value));
-		alert("got name");
 		var inputPrice = document.getElementById("Price");
 		localStorage.setItem("sellPrice", JSON.stringify(inputPrice.value));
 		var inputCond = document.getElementById("cond_form");
 		localStorage.setItem("sellCond", JSON.stringify(inputCond.value));
-		alert("got condition");
-		var inputBooks = document.getElementById("books_form");
-		localStorage.setItem("tradeBooks", JSON.stringify(inputBooks.value));
-		alert("Submitted successfully! Look for your listings under ACCOUNT!");
-		closeCurWindow();
 	}
 	function closeCurWindow() {
 		this.close();
@@ -71,6 +62,7 @@
 			alert("Please input a price")
 			return false;
 		} else{
+			this.addToSell();
 			alert("Submitted successfully! Look for your listings under ACCOUNT!");
 		}
 		closeCurWindow();
