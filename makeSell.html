@@ -21,15 +21,15 @@
 
 	<div class="container-95">
 			<h2><u>Sell</u></h2>
-			<span class="form-field">Name*: <select>
+			<span class="form-field" id="name_form">Name*: <select>
 											<option value="HCI">Human Computer Interactions</option>
 											<option value="MB">Music Business</option>
 											<option value="CogLab">Writing Papers in Psychology</option>
 											<option value="Stat">Statistics</option>
 										</select></span><br>
 		
-			<span class="form-field">Price ($)*: <input type="number" min="0.00" step="0.01" name="Price" id = "Price" value="" oninput="validity.valid||(value='');" required></span><br>
-			<span class="form-field">Condition*: <select>
+			<span class="form-field" id="price_form">Price ($)*: <input type="number" min="0.00" step="0.01" name="Price" id = "Price" value="" oninput="validity.valid||(value='');" required></span><br>
+			<span class="form-field" id="cond_form">Condition*: <select>
 												<option value="New">New</option>
 												<option value="Used">Used</option>
 											</select></span><br>
@@ -42,6 +42,23 @@
 	</div>
 	
 	<script>
+	function addToSell() {
+		alert("Start");
+		alert("getting name");
+		var inputName = document.getElementById("name_form");
+		alert("setting name");
+		localStorage.setItem("sellName", JSON.stringify(inputName.value));
+		alert("got name");
+		var inputPrice = document.getElementById("price_form");
+		localStorage.setItem("sellPrice", JSON.stringify(inputPrice.value));
+		var inputCond = document.getElementById("cond_form");
+		localStorage.setItem("sellCond", JSON.stringify(inputCond.value));
+		alert("got condition");
+		var inputBooks = document.getElementById("books_form");
+		localStorage.setItem("tradeBooks", JSON.stringify(inputBooks.value));
+		alert("Submitted successfully! Look for your listings under ACCOUNT!");
+		closeCurWindow();
+	}
 	function closeCurWindow() {
 		this.close();
     }
