@@ -21,17 +21,17 @@
 
 	<div class="container-95">
 		<h2><u>Trade</u></h2>
-		<span class="form-field" id="name_form">Name*: <select>
+		<span class="form-field">Name*: <select id="name_form">
 											<option value="HCI">Human Computer Interactions</option>
 											<option value="MB">Music Business</option>
 											<option value="CogLab">Writing Papers in Psychology</option>
 											<option value="Stat">Statistics</option>
 										</select></span><br>
-		<span class="form-field" id="cond_form">Condition*: <select>
+		<span class="form-field" >Condition*: <select id="cond_form">
 												<option value="New">New</option>
 												<option value="Used">Used</option>
 											</select></span><br>
-		<span class="form-field" id="books_form">Books Wanted: <input type="text" name="Option" value="Type the books you want"></span><br>
+		<span class="form-field">Books Wanted: <input type="text" name="Option" id="books_form" value="Type the books you want"></span><br>
 
 		<button type="button" class="secondary-button" onclick="closeCurWindow()">Cancel</button>
 		<button type="button" class="secondary-button" onclick="openHelp()">Help</button>
@@ -40,15 +40,10 @@
 	
 	<script>
 	function addToTrade() {
-		alert("Start");
-		alert("getting name");
 		var inputName = document.getElementById("name_form");
-		alert("setting name");
 		localStorage.setItem("tradeName", JSON.stringify(inputName.value));
-		alert("got name");
 		var inputCond = document.getElementById("cond_form");
 		localStorage.setItem("tradeCond", JSON.stringify(inputCond.value));
-		alert("got condition");
 		var inputBooks = document.getElementById("books_form");
 		localStorage.setItem("tradeBooks", JSON.stringify(inputBooks.value));
 		alert("Submitted successfully! Look for your listings under ACCOUNT!");
@@ -61,11 +56,6 @@
         var helpWind = window.open("", "MsgWindow", "width=200,height=150");
         helpWind.document.write("<p>Use the drop down menu to select the book you have and are willing to trade.</p>");
     }
-    function submitted() {
-		this.addToTrade();
-		alert("Submitted successfully! Look for your listings under ACCOUNT!");
-		closeCurWindow();
-	}
     </script>
 
 </body>
