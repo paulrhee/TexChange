@@ -44,13 +44,13 @@
 		alert("getting name");
 		var inputName = document.getElementById("name_form");
 		alert("setting name");
-		localStorage.setItem("tradeName", inputName.value.toString());
+		localStorage.setItem("tradeName", JSON.stringify(inputName.value));
 		alert("got name");
 		var inputCond = document.getElementById("cond_form");
-		localStorage.setItem("tradeCond", inputCond.value.toString());
+		localStorage.setItem("tradeCond", JSON.stringify(inputCond.value));
 		alert("got condition");
 		var inputBooks = document.getElementById("books_form");
-		localStorage.setItem("tradeBooks", inputBooks.value.toString());
+		localStorage.setItem("tradeBooks", JSON.stringify(inputBooks.value));
 		alert("Submitted successfully! Look for your listings under ACCOUNT!");
 		closeCurWindow();
 	}
