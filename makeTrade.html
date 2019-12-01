@@ -46,6 +46,8 @@
 		localStorage.setItem("tradeCond", inputCond.value.toString());
 		var inputBooks = document.getElementById("books_form");
 		localStorage.setItem("tradeBooks", inputBooks.value.toString());
+		alert("Submitted successfully! Look for your listings under ACCOUNT!");
+		closeCurWindow();
 	}
 	function closeCurWindow() {
 		this.close();
