@@ -51,7 +51,7 @@ th {
 
       <h4 class="category">Name: Test</h4> <p></p>
       <h4 class="category">Email: test@gmail.com</h4> <p></p>
-      <h4 class="category">Phone Number</h4> <p></p>
+      <h4 class="category">Phone Number:</h4> <p></p>
 
       <table id="profile">
               <tr>
@@ -80,6 +80,7 @@ th {
       cell2.innerHTML = JSON.parse(localStorage.getItem("tradeName"));
       var cell3 = row.insertCell(2);
       cell3.innerHTML = '<button type="button" onclick="deleteRow(this)">remove</button>';
+      row.id = "traderow_id";
     }
     if (localStorage.getItem("sellName").value !== "") {
       var row = document.getElementById("profile").insertRow(-1);
@@ -89,6 +90,7 @@ th {
       cell2.innerHTML = JSON.parse(localStorage.getItem("sellName"));
       var cell3 = row.insertCell(2);
       cell3.innerHTML = '<button type="button" onclick="deleteRow(this)">remove</button>';
+      row.id = "sellrow_id";
     }
     
     function createSell(){
@@ -98,6 +100,16 @@ th {
       var tradeWin = window.open("makeTrade.html", "trade", "width=800,height=400")
     }
     function deleteRow(o) {
+      if ($( "o:contains('SELL')" )) {
+        localStorage.removeItem("sellName");
+        localStorage.removeItem("sellCond");
+        localStorage.removeItem("sellBooks");
+      }
+      else if ($( "o:contains('TRADE')" )) {
+        localStorage.removeItem("tradeName");
+        localStorage.removeItem("tradeCond");
+        localStorage.removeItem("tradeBooks");
+      }
       var p = o.parentNode.parentNode;
       p.parentNode.removeChild(p);
     }
