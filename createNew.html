@@ -21,7 +21,7 @@
 
     <div onclick="location.href='search.html'" class="nav-bar">
         <div class="texchange">
-            TEXCHANGE
+            <img class="logo" src="./logo.png" />
         </div>
         <nav>
             <ul class="nav-menu">
@@ -34,7 +34,7 @@
 
     <div class="container-95">
 
-        <h2><u>Create New Listing</u></h2>
+        <h3>Create New Listing</h3>
         <p> Please fill in the following information of the textbook that you wish to sell! Thank you!</p>
 
         <form action="search.html", onsubmit="submitted()">
@@ -45,10 +45,11 @@
                 <span class="form-field">Professor*: <input type="text" name="Professor" value="" required></span><br>
                 <!-- Upload image -->
                 <span class="form-field">Picture*: <input type="file" name="Picture" accept="image/*"></span><br>
-                <input class="secondary-button" type="submit" value="Submit">
-                    
+                <div class="button-row half">
+                    <input class="secondary-button blue" type="submit" value="Submit">
+                    <button class="secondary-button" onclick="location.href='search.html'" type="button">Cancel</button>
+                </div>
             </form>
-        <button type="button" class="secondary-button" onclick="location.href='search.html'">Cancel</button>
     </div>
     <script>
     

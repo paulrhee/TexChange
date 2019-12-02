@@ -10,9 +10,9 @@ h1 {
 }
 
 .nav-bar {
-	width:97%;
+	width:83%;
 	height:40px;
-	padding:10px 15px;
+	margin:10px 8.5%;
 	display:inline-block;
 }
 
@@ -26,7 +26,7 @@ h1 {
 	font-size: 2em;
 	line-height: 1em;
 
-	color: #000000;
+	color: #2F2B2B;
 
 	padding:15px;
 
@@ -49,8 +49,9 @@ nav {
 
 a { 
 	text-decoration: none;
-	font-family:"Lato Black", sans-serif;
-	color:#000;
+	font-family:"Lato Medium", sans-serif;
+	color:#2F2B2B;
+	font-weight:600;
 }
 
 .nav-menu li {
@@ -68,7 +69,7 @@ a {
 }
 
 .form {
-	margin:100px;
+	margin:120px 20%;
 }
 
 .form-box {
@@ -107,7 +108,12 @@ img.register {
 }
 
 .container-95 {
-	width:95%;
+	width:80%;
+	margin:0 auto;
+}
+
+.container-95-wide {
+	width:85%;
 	margin:0 auto;
 }
 
@@ -133,7 +139,7 @@ img.register {
 .hero-text h1 {
 	font-size: 2.5em;
 	line-height: 1em;
-	color: #000000;
+	color: #2F2B2B;
 	margin:15px 10px 30px 10px;
 }
 
@@ -147,9 +153,29 @@ img.register {
 	margin:10px;
 }
 
+h3 { 
+	font-family:"Lato Medium", sans-serif;
+	font-weight: 600; 
+	font-size: 1.5em; 
+	line-height: 0.75em; 
+	color: #2F2B2B;
+	margin:40px 0 20px 0;
+}
+
 .button-row {
 	width:100%;
-	float:right;
+}
+
+.button-row.full {
+	width:385%;
+}
+
+.button-row.full .primary-button {
+	float: right;
+}
+
+.button-row.full .secondary-button {
+	float: right;
 }
 
 .primary-button {
@@ -163,7 +189,7 @@ img.register {
 	font-size: 1em;
 	line-height: 0.75em;
 
-	color:#000000;
+	color:#2F2B2B;
 
 	margin:10px;
 
@@ -185,11 +211,22 @@ img.register {
 	line-height: 0.75em;
 
 	padding:10px 20px;
-	color:#000000;
+	color:#2F2B2B;
 
 	margin:10px;
 
 	border:none;
+}
+
+.secondary-button.blue {
+	background: #B9CFE4;
+
+	color:#2F2B2B;
+}
+
+.secondary-button.blue:hover {
+	cursor:pointer;
+	background: #8BB3BF;
 }
 
 .secondary-button:hover {
@@ -198,7 +235,7 @@ img.register {
 }
 
 .logo {
-	width: 100px;
+	width: 150px;
 	height: auto;
 }
 
@@ -217,7 +254,7 @@ img.register {
 	line-height: 0.75em;
 	padding:7px 14px;
 
-	color:#000000;
+	color:#2F2B2B;
 
 	margin-bottom:12px;
 
