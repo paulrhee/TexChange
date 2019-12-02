@@ -32,26 +32,44 @@
         </nav>
     </div>
     <div class="container-95">
-        <h3>Textbooks</h3>
-        <input class="search-bar" type="text" id="input" onkeyup="filterSearch()" placeholder="Filter by textbook name...">
+        <div class="text-50-left">
+            <h3>Textbooks</h3>
+            <h4>Our textbook directory is populated entirely by you, our users. If you don't see a listing for a textbook that you own and are looking to sell, then feel free to add it by using the "New Entry Button" to the right!</h4>
+        </div>
+        <button class="secondary-button right" onclick="location.href='createNew.html'" type="button">New Book Entry</button>
+        <input class="search-bar" type="text" id="input" onkeyup="filterSearch()" placeholder="Filter by textbook name or author...">
 
         <table id="textbookTable">
             <tr class="row">
-                <td><a href="designBook.html"><div id="designBook" class="search-result"></div><br>Designing Interactive Systems</a></td>
+                <td><a href="#"><div id="aiBook" class="search-result"></div><br><b>Artificial Intelligence: A Modern Approach</b><br>Peter Norvig, Stuart J. Russell</a></td>
             </tr>
             <tr class="row">
-                <td><a href="musicBook.html"><div id="musicBook" class="search-result"></div><br>Music Industry</a></td>
+                <td><a href="#"><div id="bioBook" class="search-result"></div><br><b>Biology, 2nd Edition</b><br>Jurukovski, Avissar, Choi, Rye, Wise, DeSaix</a></td>
             </tr>
             <tr class="row">
-                <td><a href="statBook.html"><div id="statBook" class="search-result"></div><br>Statistics</a></td>
+                <td><a href="#"><div id="chemBook" class="search-result"></div><br><b>Chemistry: An Atoms Focused Approach</b><br>Kirss, Gilbert, Foster, Bretz</a></td>
             </tr>
             <tr class="row">
-                <td><a href="psycLabBook.html"><div id="psycLabBook" class="search-result"></div><br>Writing Papers in Psychology</a></td>
+                <td><a href="designBook.html"><div id="designBook" class="search-result"></div><br><b>Designing Interactive Systems, Fourth Edition</b><br>David R. Benyon</a></td>
             </tr>
+            <tr class="row">
+                <td><a href="#"><div id="fundiesBook" class="search-result"></div><br><b>How to Design Programs, Second Edition</b><br>Matthias Felleisen</a></td>
+            </tr>
+            <tr class="row">
+                <td><a href="musicBook.html"><div id="musicBook" class="search-result"></div><br><b>Music Business Handbook and Career Guide</b><br>Tim Baskerville</a></td>
+            </tr>
+            <tr class="row">
+                <td><a href="statBook.html"><div id="statBook" class="search-result"></div><br><b>Statistics</b><br>Robert S. Witte and John S. Witte</a></td>
+            </tr>
+            <tr class="row">
+                <td><a href="#"><div id="philBook" class="search-result"></div><br><b>Philosophy: The Death of the Ethic of Life</b><br>John Basl</a></td>
+            </tr>
+            <tr class="row">
+                <td><a href="#"><div id="designerBook" class="search-result"></div><br><b>The Design of Everyday Things</b><br>Don Norman</a></td>
+            </tr>
+            <tr class="row">
+                <td><a href="psycLabBook.html"><div id="psycLabBook" class="search-result"></div><br><b>Writing Papers in Psychology</b><br>Ralph L. Rosnow, Mimi Rosnow</a></td>
         </table>
-
-
-        <button class="secondary-button" onclick="location.href='createNew.html'" type="button">New Book Entry</button>
 
         <script>
             function filterSearch() {

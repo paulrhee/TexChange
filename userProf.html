@@ -31,49 +31,54 @@ th {
 </style>
 <body>
 
-    <div onclick="location.href='search.html'" class="nav-bar">
-        <div class="texchange">
-            <img class="logo" src="./logo.png" />
-        </div>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="search.html">Home</a></li>
-                <li><a href="userProf.html">Account</a></li>
-                <li><a href="login.html">Log out</a></li>
-            </ul>
-        </nav>
+  <div onclick="location.href='search.html'" class="nav-bar">
+    <div class="texchange">
+      <img class="logo" src="./logo.png" />
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="search.html">Home</a></li>
+        <li><a href="userProf.html">Account</a></li>
+        <li><a href="login.html">Log out</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container-95">
+
+    <h3>User Profile</h3>
+
+    <div class="textbook-info">
+
+      <h4 class="category">Name: </h4> <p>Sam Casanova</p>
+      <h4 class="category">Email: </h4> <p> sam.casanova@fakemail.com</p>
+      <h4 class="category">Phone Number: </h4> <p>(555) 555-5555</p>
+      <h4 class="category">Textbooks:</h4>
     </div>
 
-    <div class="container-95">
+    <table id="profile">
+      <tr>
+        <th><u>Type</u></th>
+        <th><u>Name</u></th> 
+        <th><u>Action</u></th>
+      </tr>
+      <tr>
+        <td>SELL</td>
+        <td>Music Business</td>
+        <td><button type="button" onclick="deleteRow(this)">remove</button></td>
+      </tr>
+    </table>
 
-      <h3>User Profile</h3>
-
-
-      <h4 class="category">Name: Test</h4> <p></p>
-      <h4 class="category">Email: test@gmail.com</h4> <p></p>
-      <h4 class="category">Phone Number:</h4> <p></p>
-
-      <table id="profile">
-              <tr>
-                <th><u>Type</u></th>
-                <th><u>Name</u></th> 
-                <th><u>Action</u></th>
-              </tr>
-              <tr>
-                <td>SELL</td>
-                <td>Music Business</td>
-                <td><button type="button" onclick="deleteRow(this)">remove</button></td>
-              </tr>
-            </table>
-
+    <div class="button-row half">
       <button class="secondary-button" type="button" onclick="createSell()">New Sell Entry</button>
       <button class="secondary-button" type="button" onclick="createTrade()">New Trade Entry</button>
-
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-    
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+
     if (localStorage.getItem("tradeName").value !== "") {
       var row = document.getElementById("profile").insertRow(-1);
       var cell1 = row.insertCell(0);
@@ -105,7 +110,7 @@ th {
       var p = o.parentNode.parentNode;
       p.parentNode.removeChild(p);
     }
-    </script>
+  </script>
 
 </body>
 </html>

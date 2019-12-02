@@ -30,7 +30,7 @@ th {
 }
 </style>
 <body>
-    
+
     <div onclick="location.href='search.html'" class="nav-bar">
         <div class="texchange">
             <img class="logo" src="./logo.png" />
@@ -45,25 +45,29 @@ th {
         </nav>
     </div>
     <div class="container-95">
-        <h3>TRADE</h3>
-        <p>The following people owns a copy of this book and are willing to trade for the books listed under "Book Wanted" column. Please contact the person that you wish to trade with via email or phone. Thank you!</p>
-  
-        <table>
+        <div class="text-50-left">
+            <h3>TRADE</h3>
+            <p>The following people own a copy of this book and are willing to trade for the books listed under "Book Wanted" column. Please contact the person that you wish to trade with via email or phone. If you would like to make a new listing, please use the "New Trade Entry" button to the right. Thank you!</p>
+        </div>
+
+        <button type="button" class="secondary-button right" onclick="createTrade()">New Trade Entry</button>
+
+        <table class="buy-table">
             <tr>
-                <th><u>Name</u></th>
-                <th><u>Contact Info</u></th> 
-                <th><u>Book Wanted</u></th>
-                <th><u>Condition</u></th>
+                <th>Name</th>
+                <th>Contact Information</th> 
+                <th>Book(s) Wanted</th>
+                <th>Condition</th>
             </tr>
             <tr>
-                <td>Brendan Smith</td>
+                <td><b>Brendan Smith</b></td>
                 <td>
                     <table>
                         <tr>
-                            <td>Phone: 9999999999</td>
+                            <td><b>Phone:</b> 9999999999</td>
                         </tr>
                         <tr>
-                            <td>Email: b.smith@yahoo.com</td>
+                            <td><b>Email:</b> b.smith@yahoo.com</td>
                         </tr>
                     </table>
                 </td>
@@ -71,14 +75,14 @@ th {
                 <td>Used</td>
             </tr>
             <tr>
-                <td>Casey Lee</td>
+                <td><b>Casey Lee</b></td>
                 <td>
                     <table>
                         <tr>
-                            <td>Phone: N/A</td>
+                            <td><b>Phone:</b> N/A</td>
                         </tr>
                         <tr>
-                            <td>Email: lee.c@husky.neu.edu</td>
+                            <td><b>Email:</b> lee.c@husky.neu.edu</td>
                         </tr>
                     </table>
                 </td>
@@ -86,14 +90,14 @@ th {
                 <td>New</td>
             </tr>
             <tr>
-                <td>Bob Bilder</td>
+                <td><b>Bob Bilder</b></td>
                 <td>
                     <table>
                         <tr>
-                            <td>Phone: 1234567891</td>
+                            <td><b>Phone:</b> 1234567891</td>
                         </tr>
                         <tr>
-                            <td>Email: bb@yahoo.com</td>
+                            <td><b>Email:</b> bb@icanfixit.com</td>
                         </tr>
                     </table>
                 </td>
@@ -101,13 +105,12 @@ th {
                 <td>New</td>
             </tr>
         </table>
-        <button type="button" class="secondary-button" onclick="createTrade()">New Trade Entry</button>
     </div>
 
     <script>
-    function createTrade(){
-        var tradeWin = window.open("makeTrade.html", "trade", "width=800,height=400")
-    }
+        function createTrade(){
+            var tradeWin = window.open("makeTrade.html", "trade", "width=800,height=400")
+        }
     </script>
 
 </body>
