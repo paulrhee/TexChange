@@ -102,16 +102,6 @@ th {
       var tradeWin = window.open("makeTrade.html", "trade", "width=800,height=400")
     }
     function deleteRow(o) {
-      if ($( "o:contains('SELL')" )) {
-        localStorage.removeItem("sellName");
-        localStorage.removeItem("sellCond");
-        localStorage.removeItem("sellBooks");
-      }
-      else if ($( "o:contains('TRADE')" )) {
-        localStorage.removeItem("tradeName");
-        localStorage.removeItem("tradeCond");
-        localStorage.removeItem("tradeBooks");
-      }
       var p = o.parentNode.parentNode;
       p.parentNode.removeChild(p);
     }
