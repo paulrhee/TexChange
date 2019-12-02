@@ -256,8 +256,8 @@ h4 {
 }
 
 .textbook {
-	width: 80%;
-	height: auto;
+	height:500px;
+	width:auto;
 	float:right;
 }
 
@@ -276,6 +276,13 @@ h4 {
 
 #profile th, #profile td {
 	padding:5px 10px;
+}
+
+.propic {
+	margin-top:15px;
+	float:right;
+	width:250px;
+	height:auto;
 }
 
 .buy-table table, .buy-table table tbody, .buy-table table td, .buy-table table tr {

@@ -15,10 +15,10 @@
 	<meta charset="UTF-8">
 	<!-- Site Title -->
 	<title>User Profile | TexChange</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./favicon.png">
-    <!-- Stylesheet -->
-	<link rel="stylesheet" href="styles.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <style>
 table, th, td {
@@ -49,32 +49,52 @@ th {
 
   <div class="container-95">
 
-    <h3>User Profile</h3>
+    <div class="container-55">
 
-    <div class="textbook-info">
+      <h3>User Profile</h3>
 
-      <h4 class="category">Name: </h4> <p>Sam Casanova</p>
-      <h4 class="category">Email: </h4> <p> sam.casanova@fakemail.com</p>
-      <h4 class="category">Phone Number: </h4> <p>(555) 555-5555</p>
-      <h4 class="category">Textbooks:</h4>
+      <div class="textbook-info">
+
+        <h4 class="category">Name: </h4> <p>Sam Casanova</p>
+        <h4 class="category">Email: </h4> <p> sam.casanova@fakemail.com</p>
+        <h4 class="category">Phone Number: </h4> <p>(555) 555-5555</p>
+        <h4 class="category">Textbooks:</h4>
+      </div>
+
+      <table id="profile">
+        <tr>
+          <th>Type</th>
+          <th>Name</th> 
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>SELL</td>
+          <td>Music Business Handbook and Career Guide</td>
+          <td><button type="button" onclick="deleteRow(this)">remove</button></td>
+        </tr>
+        <tr>
+          <td>SELL</td>
+          <td>The Design of Everyday Things</td>
+          <td><button type="button" onclick="deleteRow(this)">remove</button></td>
+        </tr>
+        <tr>
+          <td>TRADE</td>
+          <td>How to Design Programs, Second Edition</td>
+          <td><button type="button" onclick="deleteRow(this)">remove</button></td>
+        </tr>
+      </table>
+
+      <div class="button-row half">
+        <button class="secondary-button" type="button" onclick="createSell()">New Sell Entry</button>
+        <button class="secondary-button" type="button" onclick="createTrade()">New Trade Entry</button>
+      </div>
+
     </div>
 
-    <table id="profile">
-      <tr>
-        <th><u>Type</u></th>
-        <th><u>Name</u></th> 
-        <th><u>Action</u></th>
-      </tr>
-      <tr>
-        <td>SELL</td>
-        <td>Music Business</td>
-        <td><button type="button" onclick="deleteRow(this)">remove</button></td>
-      </tr>
-    </table>
+    <div class="container-45">
 
-    <div class="button-row half">
-      <button class="secondary-button" type="button" onclick="createSell()">New Sell Entry</button>
-      <button class="secondary-button" type="button" onclick="createTrade()">New Trade Entry</button>
+      <img class="propic" src="./user.png" />
+
     </div>
 
   </div>
